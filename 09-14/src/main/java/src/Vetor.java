@@ -6,7 +6,7 @@ package src;
 public class Vetor {
 
     private int elements[];// = new int[5];
-    private int last_index = 0;
+    private int lastIndex = 0;
 
     /**
      * 
@@ -42,20 +42,17 @@ public class Vetor {
      * @param valor
      */
     public void adicionar(int valor) {
-        // verificar o tamanho do vetor
-        //
-        // elements[last_index] = valor;
-        // last_index++;
-        if (last_index == elements.length) {
-            int old_elements[] = elements;
-            int new_index = elements.length + 1;
-            int new_elements[] = new int[new_index];
-
-        } else {
-            elements[last_index] = valor;
-            last_index++;
+        if (lastIndex == elements.length) {
+            int newTotalElements = elements.length * 2;
+            int newElements[] = new int[newTotalElements];
+            for (int i = 0; i < elements.length; i++) {
+                newElements[i] = elements[i];
+            }
+            elements = newElements;
         }
-        // elements
+
+        elements[lastIndex] = valor;
+        lastIndex++;
     }
 
     /**
