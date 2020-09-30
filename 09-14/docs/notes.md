@@ -34,3 +34,22 @@
 [1, ..., 0] - 25p
 [1, ..., 0] - 625p
 [1, ..., 0] - 390625p
+
+[1, 2, 3, 4, 5, 6, 0, 0, 0, X] - 10p
+
+[1, 2, 3, 4, 5, 6, 0, 0, 0, X] - 1/10
+[1, 2, 3, 4, 5, 6, 0, 0, 0, X] - 1/10 - 1/9
+[1, 2, 3, 4, 5, 6, 0, 0, 0, X] - 1/10 - 1/9 - 1/8
+[1, 2, 3, 4, 5, 6, 0, 0, 0, X] - 1/10 - 1/9 - 1/8 - 1/7
+
+```
+[1, 2, 3, 4, 5, 6, 7] valor de BUSCA - 6 | calcular o indice do meio do vetor
+    /           \
+[1, 2, 3, 4] [ 5, 6, 7]
+```
+
+1. calcular o indice do meio do vetor
+2. verificar se o valor[indice] é maior ou menor que o valor buscado.
+   2.1 se o valor[indice] for menor, refazer o passo 1. com o lado maior
+   2.2 se o valor[indice] for maior, refazer o passo 1. com o lado menor.
+   2.3 se o valor[indice] for igual, retornar o valor.

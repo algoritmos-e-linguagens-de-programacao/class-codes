@@ -64,6 +64,14 @@ public class Vetor {
         return elements[index];
     }
 
+    public Boolean contains(int element) {
+        for (int i = 0; i < elements.length; i++) {
+            if (elements[i] == element)
+                return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

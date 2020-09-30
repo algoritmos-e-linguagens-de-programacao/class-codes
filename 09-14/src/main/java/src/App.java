@@ -22,5 +22,8 @@ public class App {
         System.out.println(vetor);
         vetor.adicionar(20);
         System.out.println(vetor);
+        System.out.println(vetor.contains(13));
+        System.out.println(vetor.contains(43));
+
     }
 }
