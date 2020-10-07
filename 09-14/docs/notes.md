@@ -43,6 +43,8 @@
 [1, 2, 3, 4, 5, 6, 0, 0, 0, X] - 1/10 - 1/9 - 1/8 - 1/7
 
 ```
+mid = tam / 2
+         mid min    max
 [1, 2, 3, 4, 5, 6, 7] valor de BUSCA - 6 | calcular o indice do meio do vetor
     /           \
 [1, 2, 3, 4] [ 5, 6, 7]

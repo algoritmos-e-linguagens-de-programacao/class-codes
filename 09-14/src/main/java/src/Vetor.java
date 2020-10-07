@@ -65,11 +65,28 @@ public class Vetor {
     }
 
     public Boolean contains(int element) {
-        for (int i = 0; i < elements.length; i++) {
-            if (elements[i] == element)
+        int size = elements.length;
+        int min = 0;
+        int max = size - 1;
+        while (min <= max) {
+            int mid = (min + max) / 2;
+            int current = elements[mid];
+            if (element == current) {
                 return true;
+            } else if (current < element) {
+                min = mid + 1;
+            } else {
+                max = mid - 1;
+            }
         }
         return false;
+
+        // for (int i = 0; i < elements.length; i++) {
+        // if (elements[i] == element)
+        // return true;
+        // }
+        // return false;
+
     }
 
     @Override
