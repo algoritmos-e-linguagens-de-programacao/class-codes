@@ -1,6 +1,6 @@
 package src.linked;
 
-public class ListaLigada {
+public class ListaLigadaCircular {
 
     private Node init;
     private Node end;
@@ -8,9 +8,12 @@ public class ListaLigada {
     public void adicionar(int value){
         if(init == null){
             init = new Node(value);
+            init.setNext(init);
             end = init;
-        }else{            
-            end.setNext(new Node(value));
+            // end.setNext(init);
+        }else{          
+            Node novo = new Node(value, init);
+            end.setNext(novo);
             end = end.getNext();
         }
     }

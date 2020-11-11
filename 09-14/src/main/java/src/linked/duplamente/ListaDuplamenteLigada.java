@@ -1,6 +1,6 @@
-package src.linked;
+package src.linked.duplamente;
 
-public class ListaLigada {
+public class ListaDuplamenteLigada {
 
     private Node init;
     private Node end;
@@ -9,24 +9,24 @@ public class ListaLigada {
         if(init == null){
             init = new Node(value);
             end = init;
-        }else{            
-            end.setNext(new Node(value));
+        }else{
+            end.setNext(new Node(value, null, end));
             end = end.getNext();
         }
     }
 
 
-    public void remocao(int value){
-        if(init == null){
-            if(value == init.getValue()){
-
-            }
-        }else{
-            Node aux = init;
-            while(aux.getNext() != null || value == aux.getValue()){
-                aux = aux.getNext();
-            }
+    public void remocao(int value){        
+        Node aux = init;
+        while(value != aux.getValue() && aux.getNext() != null){
+            aux = aux.getNext();
         }
+        if(aux.getNext() == null) return;
+
+        aux.getAnt().setNext(aux.getNext());
+        aux.getNext().setAnt(aux.getAnt());
+        aux.setAnt(null);
+        aux.setNext(null);
     }
 
 

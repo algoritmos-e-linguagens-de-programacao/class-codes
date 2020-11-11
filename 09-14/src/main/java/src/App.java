@@ -1,24 +1,25 @@
 package src;
 
-import javax.sound.midi.SysexMessage;
-
-import src.linked.ListaLigada;
-import src.sorters.BubbleSorter;
-import src.sorters.InsertionSorter;
-import src.sorters.SelectionSorter;
+// import src.linked.ListaLigada;
+// import src.linked.ListaLigadaCircular;
+// import src.sorters.BubbleSorter;
+// import src.sorters.InsertionSorter;
+// import src.sorters.SelectionSorter;
+import src.linked.duplamente.ListaDuplamenteLigada;
 
 public class App {
 
     public static void main(String[] args) {
-        ListaLigada lista = new ListaLigada();
-        int v[] = new int[15];
+        ListaDuplamenteLigada lista = new ListaDuplamenteLigada();
+        
         System.out.println(lista);
         lista.adicionar(21);
         lista.adicionar(41);
         lista.adicionar(1);
-        lista.adicionar(7);
-        lista.adicionar(8);
-        lista.adicionar(11);
+        lista.remocao(41);
+        // lista.adicionar(7);
+        // lista.adicionar(8);
+        // lista.adicionar(11);
         System.out.println(lista);
         // int vetor[] = { 32, 5, 9, 1, 41 };
         // int resp[];
